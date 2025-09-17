@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Egg Timer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Loader -->
+  <div id="loader">
+    <img src="loader.gif" alt="Loading...">
+  </div>
+
+  <!-- Welcome Container -->
+  <div id="main-content" class="welcome-container hidden">
+    <img src="logo.png" alt="Egg Timer Logo" class="logo">
+    <h1>Ready for some eggs?🥚</h1>
+    <button onclick="location.href='menu.html'">Start Boiling</button>
+  </div>
+
+  <script>
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+      const main = document.getElementById("main-content");
+
+      setTimeout(() => {
+        loader.style.display = "none";
+        main.classList.remove("hidden");
+      }, 2000); // 2 seconds
+    });
+  </script>
+</body>
+</html>
